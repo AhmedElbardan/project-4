@@ -1,0 +1,500 @@
+/* 1- GENERAL STYLES
+2- MULTIPLE STYLES
+3- SECTIONS  
+1.0 HEADER SECTION
+2.0 SEARCH SECTION
+3.0 HOME SECTION
+4.0 REGISTER HEADER SECTION (EMPTY)
+5.0 REGISTER FORM SECTION
+6.0 LOGIN HEADER SECTION (EMPTY)
+7.0 LOGIN FORM SECTION
+8.0 CARTS HEADER SECTION
+9.0 CARTS HOME SECTION
+10.0 PRICE SECTION
+11.0 FAVOURITE SECTION
+12.0 JS
+13.0 @media */
+/* 1- GENERAL STYLES ---------------------------------------------------------------------------------------------------------- */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* 2- MULTIPLE STYLES ---------------------------------------------------------------------------------------------------------- */
+.container-fluid  .brand {
+    text-decoration: none;
+    margin: 10px 5vh;
+    float: left;
+}
+.navbar {
+    background-color: rgb(230, 230, 230);
+}
+h1 {
+    font-size: 26px;
+}
+.card-item , .card-list.centered , .products {
+    display: flex;
+    justify-content: center;
+}
+/* index & cartsproducts ------------------------------------------------- */
+.fa-heart {
+    float: right;
+    margin-right: 10px;
+    color: rgb(165, 165, 165);
+}
+.fa-heart:before {
+    transition: .5s;
+    color: rgb(165, 165, 165);
+}
+.fa-heart.clicked:before {
+    color: rgb(255, 0, 0);
+}
+.fa-heart:active::before {
+    color: rgb(255, 0, 0);
+    transition: 1s;
+}
+nav ul #user_info li i , .fa-heart{
+    cursor: pointer;
+}
+/* register & login ------------------------------------------------- */
+.form-container {
+    width: 75%;
+    margin: 30px auto;
+    background-color: rgb(245, 245, 245);
+    border-radius: 10px;
+}
+/* 1.0 HEADER SECTION ---------------------------------------------------------------------------------------------------------- */
+header ul {
+    display: flex;
+    list-style: none;
+}
+header li a {
+    display: block;
+    text-decoration: none;
+    min-width: 80px;
+    font-size: 20px;
+    margin: 10px 5px;
+}
+.user-place {
+    margin: auto;
+}
+#user{
+    font-size: 28px;
+    margin: -25px 0;
+    color: #0082cd;
+}
+.nav2  {
+    padding: 0 30px;
+    margin-left: auto;
+}
+.shopping_cart {
+    margin: 0 -40px;
+}
+.fa-shopping-cart {
+    margin: 12.5px 0;
+    color: #0073ff;
+    font-size: 22.5px;
+    cursor: pointer;
+}
+.fa-shopping-cart p{
+    margin: -22.5px 40px;
+    padding: 0 5px ;
+    cursor: pointer;
+}
+.fa-caret-up {
+    color: rgba(160, 160, 160, 0.8);
+    margin: 0 5px;
+    cursor: pointer;
+}
+.badge {
+    background: none;
+    width: 30px;
+    margin: -10px 15px;
+    color: #0073ff;
+    user-select: none;
+}
+.carts_products {
+    position: absolute;
+    z-index: 1;
+    width: 250px;
+    transform: translate(-140px, 12px);
+    background-color: rgb(230, 230, 230);
+    padding: 0px 10px;
+    display: none;
+    border-radius: 0 0 10px 10px;
+}
+.carts_products a {
+    text-align: center;
+}
+.carts_products div p {
+    background-color: #ffffff;
+    padding: 3px;
+    border-radius: 5px;
+    color: #0073ff;
+    margin-top: 15px;
+    user-select: none;
+}
+#links {
+    padding: 0 30px;
+    margin-left: auto;
+}
+#links li {
+    display: inline-block;
+}
+/* 2.0 SEARCH SECTION ---------------------------------------------------------------------------------------------------------- */
+.section-input {
+    position: relative;
+    height: 100px;
+    overflow: auto;
+}
+.search-container {
+    float: right;
+    width: 43%;
+}
+#category {
+    margin-left: 60px;
+    position: absolute;
+    padding: 5px;
+    float: left;
+    width: 43%;
+}
+#search {
+    padding: 2px;
+    width: 100%;
+    float: right;
+    margin: -24px 60px;
+}
+#category , #search{
+    font-size: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.hr1 {
+    margin: 0;
+}
+.hr2 {
+    display: none;
+}   
+/* 3.0 HOME SECTION ---------------------------------------------------------------------------------------------------------- */
+.home {
+    width: 95%;
+    margin: auto;
+}
+.products {
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+.add_to_cart{
+    background-color: rgb(55, 123, 230);
+}
+.add_to_cart.remove-from-cart {
+    background-color: rgb(230, 55, 55);
+}
+/* 5.0 REGISTER FORM SECTION ---------------------------------------------------------------------------------------------------------- */
+.f0 , .f1 , .f2{
+    padding: 5px 0;
+}
+.f1 , .f2{
+    float: left;
+    display: inline;
+    width: 49%;
+}
+.f2 {
+    margin-left: 2%;
+}
+.f3 , .f5 , .f6 {
+    padding: 10px 0;
+}
+/* 7.0 LOGIN FORM SECTION ---------------------------------------------------------------------------------------------------------- */
+.form-group p , .form-check , .f7{
+    margin-top: 10px;
+}
+/* 8.0 CARTS HEADER SECTION ---------------------------------------------------------------------------------------------------------- */
+.logout {
+    margin: 0px 30px;
+    padding-top: 15px;
+}
+/* 9.0 CARTS HOME SECTION ---------------------------------------------------------------------------------------------------------- */
+.carts-home {
+    margin-top: 100px;
+}
+.product-body {
+    background-color: rgb(230, 230, 230);
+    height: 240px;
+    border-radius: 25px;
+    width: 600px;
+    margin: 10px 10px;
+}
+.product-img {
+    width: 120px;
+    height: 140px;
+    border-radius: 10px;
+    margin: 35px 60px;
+}
+.product-con {
+    margin: -190px 240px;
+    width: 50%;
+    height: 200px;
+    font-size: 18px;
+}
+.product2 {
+    margin: 15px 0;
+}
+.product_item_action2 {
+    margin: 20px 0;
+    width: 55%;
+}
+.c-quantity , .c-minus , .c-plus{
+    float: left;
+}
+.c-minus {
+    padding: 5px 0px;
+    color: #ff0000;
+    cursor: pointer;
+}
+.c-plus {
+    padding: 5px 15px;
+    color: #00ff00;
+    cursor: pointer;
+}
+.Remove {
+    float: right;
+    color: #ffffff;
+    border: none;
+    font-size: 18px;
+    border-radius: 4px;
+    padding: 5px;
+    margin-top: -5px;
+}
+/* 10.0 PRICE SECTION ---------------------------------------------------------------------------------------------------------- */
+.TP {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 30px;
+}
+.hr3 {
+    margin-top: 25px;
+    color: #ababab;
+}
+/* 11.0 FAVOURITE SECTION ----------------------------------------------------------------------------------------------------------  */
+.card-wrapper {
+    margin-top: 15px;
+    padding: 7.5px;
+    overflow: hidden;
+    display: flex;
+    user-select: none;
+}
+.card-list .card-item .card-link {
+    width: 325px !important;
+    height: 325px;
+    display: block;
+    background: rgba(200, 200, 200, 0.8);
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    cursor: auto;
+    margin-left: -70px;
+}
+.card-item {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.card-item.removing {
+    opacity: 0;
+    transform: scale(0.95);
+}
+.card-link {
+    margin: 2.5px;
+    transition: box-shadow .5s, margin-top .5s;
+    border-radius: 12px;
+    list-style: none;
+}
+.card-link:hover {
+    box-shadow: 0 0 5px 2px rgba(255, 0, 0, 0.5);
+    margin-top: -2.5px;
+    background-color: #f8f9fa;
+    transition: .5s;
+}
+.card-list .card-item .card-link:active {
+    cursor: grabbing;
+}
+.card-list .card-link .card-image {
+    width: 150px;
+    height: 180px;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    display: flex;
+    justify-self: center;
+}
+.card-Product, .card-category {
+    color: black;
+    margin: 40px 0;
+    font-size: 15px;
+}
+.card-category {
+    margin: -20px 0;
+}
+.favo-icon {
+    font-size: 25px;
+}
+.hr4 {
+    color: #ababab;
+}
+/* 12.0 JS ---------------------------------------------------------------------------------------------------------- */
+.h-plus , .h-minus{
+    color: #00ff00;
+    float: right;
+    padding: 1.5px 5px;
+    cursor: pointer;
+}
+.h-minus {
+    color: #ff0000;
+}
+.quantity {
+    float: right;
+    margin: -2px 5px;
+}
+.product_item_img {
+    height: 62.5%;
+    width: 100% ;
+}
+.card {
+    float: left;
+    margin: 5px;
+    width: 350px;
+    height: 590px;
+    transition: box-shadow .5s, margin-top .5s;
+}
+.card:hover {
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+    margin-top: -2.5px;
+    background-color: #f8f9fa;
+    transition: .5s;
+}
+.card-body {
+    font-size: 20px;
+}
+.add_to_cart {
+    color: #ffffff;
+    border: none;
+    font-size: 18px;
+    border-radius: 4px;
+    padding: 5px;
+}
+/* 13.0 @media ---------------------------------------------------------------------------------------------------------- */
+@media (min-width: 990px) and (max-width: 1200px) {
+    .card-list {
+        display: flex;
+        justify-content: space-between;
+    }
+    .card-item {
+        margin: 0 120px; 
+    }
+}
+@media (max-width: 1160px ) {
+    .card {
+        width: 280px;
+    }
+}
+@media (max-width: 990px) {
+    .card-list.centered {
+        justify-content: unset;
+    }
+}
+@media (max-width: 940px ) {
+    .card {
+        width: 350px;
+        height: 575px;
+    }
+}
+@media (max-width: 840px ) {
+    #category {
+        width: 90%;
+        margin: 50px 25px;
+    }
+    #search {
+        margin: -30px 13px;
+        position: absolute;
+        width: 209%;
+    }
+    .search-container {
+        position: relative;
+        float: left;
+    }
+    .hr1 {
+        display: none;
+    }
+    .dropdown-menu {
+        width: 80%;
+    }
+    .hr2 {
+        display: block;
+    }
+    .home {
+        margin-top: 50px;
+    }
+    .section-input {
+        height: 120px;
+    }
+    .bub-list li {
+        font-size: 40px;
+        margin: auto 10px;
+        cursor: pointer;
+        display: none;
+    }
+}
+@media (max-width: 800px ) {
+    .card {
+        width: 280px;
+        height: 510px;
+    }
+}
+@media (max-width: 767.5px ) {
+    #links li {
+        display: block;
+    }
+    #links {
+        margin-left: 0px;
+    }
+    .carts_products {
+        transform: translate(-150px,8px);
+        margin-left: 150px;
+    }
+    .fa-shopping-cart .fa-caret-up {
+        position: absolute;
+    }
+    .nav2 {
+        margin-top: 20px;
+        width: 100%;
+    }
+    .shopping_cart {
+        margin-right: auto;
+        width: 30%;
+    }
+    #user {
+        margin: 0;
+    }
+    .user-place {
+        margin: 0 35px;
+    }
+}
+@media (max-width: 630px ) {
+    .card {
+        width: 340px;
+        height: 575px;
+    }
+}
+@media (max-width: 600px ) {
+    .product-body {
+        width: 90%;
+    }
+    .product-img {
+        margin: 35px 30px;
+    }
+    .product-con {
+        margin: -190px 170px;
+    }
+    .Remove {
+        margin: -5px -70px;
+    }
+}
